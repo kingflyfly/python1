@@ -1,0 +1,10 @@
+from lxml import etree
+html = etree.parse("./test2.html",etree.HTMLParser())
+result = html.xpath('//p/@class')
+result1 = html.xpath('//i/@class')
+result2 = html.xpath('//div[@class="movie-item-number"]/p/i/text()')
+result3 = html.xpath('//div[contains(@class,"movie-item-number")]/p/i/text()')
+print(result)
+print(result1)
+print(result2)
+print(result3)
